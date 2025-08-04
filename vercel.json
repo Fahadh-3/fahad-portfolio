@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/volunteering", "destination": "/dist/volunteering.html" },
-    { "source": "/contact", "destination": "/contact.html" }
-  ]
-}
