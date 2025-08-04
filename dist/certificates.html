@@ -7,13 +7,91 @@
     <meta name="author" content="Fahad Hussain" />
     <title>Certificates - Fahad Hussain</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
-    <!-- Core theme CSS -->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .certificate-section {
+            display: flex;
+            position: relative;
+        }
+        .certificate-sidebar {
+            position: sticky;
+            top: 0;
+            flex: 0 0 160px;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-right: 1px solid #ddd;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .certificate-sidebar h4 {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .certificate-sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .certificate-sidebar li {
+            margin-bottom: 0.75rem;
+        }
+        .certificate-sidebar a {
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 0.4rem 0.6rem;
+            border-radius: 5px;
+        }
+        .certificate-sidebar a:hover {
+            background-color: #b66b4d;
+            color: white;
+        }
+        .certificate-content {
+            flex-grow: 1;
+            padding: 2rem;
+        }
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .certificate-tile {
+            background-color: transparent;
+            height : 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .certificate-tile:hover {
+            transform: scale(1.01);
+        }
+        .certificate-tile img {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .certificate-caption {
+            padding: 1rem 0.5rem 0.5rem 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            background: none;
+            border: none;
+        }
+
+    </style>
 </head>
 <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -26,10 +104,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+               <!-- <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>  -->
                 <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
                 <li class="nav-item"><a class="nav-link" href="volunteering.html">Volunteering</a></li>
             </ul>
@@ -40,62 +117,130 @@
         <section class="resume-section" id="certificates">
             <div class="resume-section-content">
                 <h2 class="mb-5">Certificates</h2>
+                <div class="certificate-section">
+                    <div class="certificate-sidebar">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#confseminars">Conferences</a></li>
+                            <li><a href="#programming">Programming</a></li>
+                            <li><a href="#energy">Energy</a></li>
+                            <li><a href="#materials">Materials</a></li>
+                            <li><a href="#other">Other</a></li>
+                        </ul>
+                    </div>
+                    <div class="certificate-content">
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                    <div class="flex-grow-1">
-                        <h4 class="mb-2">Programming</h4>
-                        <p>
-                            <a href="https://www.linkedin.com/learning/certificates/a349777c48636a0c174d6c9a2778ed5eeb1d7a41404316e033a2dbc0ff27c14b?trk=share_certificate" target="_blank">Python for Automation</a><br>
-                            <a href="https://ude.my/UC-fi75341a-80ec-4011-a71c-bda89feceb95" target="_blank">Python for Beginners</a><br>
-                            <a href="https://www.coursera.org/verify/TRHLATD2VSK6" target="_blank">Programming for Everybody</a><br>
-                            <a href="https://coursera.org/verify/64YSK9Q82KNL" target="_blank">LaTeX</a>
-                        </p>
+                        <div class="mb-5" id="confseminars">
+                            <h4 class="mb-3">Conferences and Seminars</h4>
+                            <div class="certificate-grid">
+                                <a href="assets/certificates/uspcase.pdf" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/uspcase.png" alt="Summer Internship NUST">
+                                    <div class="certificate-caption">USPCAS-E Summer Internship</div>
+                                </a>
+                                <a href="assets/certificates/jcm.pdf" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/jmc.png" alt="JMC Conference Presentation">
+                                    <div class="certificate-caption">JMC Conference</div>
+                                </a>
+                                <a href="assets/certificates/vaass.pdf" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/vaass.png" alt="ITTC VAASS Participation">
+                                    <div class="certificate-caption">ITTC VAASS</div>
+                                </a>
+                                <a href="assets/certificates/iba.pdf" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/iba.png" alt="Ion Beam Workshop Participation">
+                                    <div class="certificate-caption">Ion Beam Workshop</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mb-5" id="programming">
+                            <h4 class="mb-3">Programming</h4>
+                            <div class="certificate-grid">
+                                <a href="https://www.linkedin.com/learning/certificates/a349777c48636a0c174d6c9a2778ed5eeb1d7a41404316e033a2dbc0ff27c14b" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/python_automation.jpeg" alt="Python for Automation">
+                                    <div class="certificate-caption">Python for Automation</div>
+                                </a>
+                                <a href="https://www.udemy.com/certificate/UC-f775341a-80ec-4011-a71c-bda89feceb95/" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/python_beginner.jpg" alt="Python for Beginners">
+                                    <div class="certificate-caption">Python for Beginners</div>
+                                </a>                                <a href="https://www.coursera.org/verify/TRHLATD2VSK6" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/python_everybody.png" alt="Programming for Everybody">
+                                    <div class="certificate-caption">Python</div>
+                                </a>
+                                <a href="https://coursera.org/verify/64YSK9Q82KNL" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/latex.png" alt="LaTeX">
+                                    <div class="certificate-caption">LaTeX</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mb-5" id="energy">
+                            <h4 class="mb-3">Energy</h4>
+                            <div class="certificate-grid">
+                                <a href="https://coursera.org/verify/specialization/7CJKXFZ7DHUZ" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/renewable_energy.png" alt="Renewable Energy">
+                                    <div class="certificate-caption">Renewable Energy</div>
+                                </a>
+                                <a href="https://coursera.org/verify/N3ELN4JXZTGG" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/energy_skku.png" alt="Energy Harvesting">
+                                    <div class="certificate-caption">Energy Harvesting</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mb-5" id="materials">
+                            <h4 class="mb-3">Materials</h4>
+                            <div class="certificate-grid">
+                                <a href="https://coursera.org/verify/specialization/N7R22AUA7M2P" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/mat1.png" alt="Materials Science I">
+                                    <div class="certificate-caption">Materials Science I</div>
+                                </a>
+                                <a href="https://coursera.org/verify/specialization/J5GJ66BS9WXU" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/mat2.png" alt="Materials Science II">
+                                    <div class="certificate-caption">Materials Science II</div>
+                                </a>
+                                 <a href="https://coursera.org/verify/specialization/S9UUXP7379HZ" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/additive.png" alt="Additive Manufacturing">
+                                    <div class="certificate-caption">Additive Manufacturing</div>
+                                </a>
+                                <a href="https://coursera.org/verify/DK6RUQJV5Y5Y" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/mat3.png" alt="Materials Data Science">
+                                    <div class="certificate-caption">Materials Data Science</div>
+                                </a>
+                                <a href="https://coursera.org/verify/9F2S42D2JZMU" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/molecular.png" alt="Molecular Spectroscopy">
+                                    <div class="certificate-caption">Molecular Spectroscopy</div>
+                                </a>
+                                <a href="https://coursera.org/verify/QC6UVQDW3XVY" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/nano_unc.png" alt="Nano Maker's Course">
+                                    <div class="certificate-caption">Nano Maker's Course</div>
+                                </a>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/XTH5ZZRNC2VE" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/nano_technion.png" alt="Nanotechnology and Nanosensors">
+                                    <div class="certificate-caption">Nanotechnology & Nanosensors</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mb-5" id="other">
+                            <h4 class="mb-3">Other</h4>
+                            <div class="certificate-grid">
+                                <a href="https://cert.efset.org/en/8aQeTD" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/efset.png" alt="EF SET English">
+                                    <div class="certificate-caption">EF SET English</div>
+                                </a>
+                                <a href="https://qr.page/g/3z9CFnPahiW" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/bls.png" alt="BLS Provider">
+                                    <div class="certificate-caption">BLS Provider</div>
+                                </a>
+                                <a href="assets/certificates/alumni.pdf" class="certificate-tile" target="_blank">
+                                    <img src="assets/certificates/alumni.png" alt="Alumni Reunion">
+                                    <div class="certificate-caption">Alumni Reunion</div>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                    <div class="flex-grow-1">
-                        <h4 class="mb-2">Energy</h4>
-                        <p>
-                            <a href="https://coursera.org/verify/specialization/7CJKXFZ7DHUZ" target="_blank">Renewable Energy</a><br>
-                            <a href="https://coursera.org/verify/N3ELN4JXZTGG" target="_blank">Energy Harvesting</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                    <div class="flex-grow-1">
-                        <h4 class="mb-2">Materials</h4>
-                        <p>
-                            <a href="https://coursera.org/verify/specialization/J5GJ66BS9WXU" target="_blank">Materials Science I</a><br>
-                            <a href="https://coursera.org/verify/specialization/N7R22AUA7M2P" target="_blank">Materials Science II</a><br>
-                            <a href="https://coursera.org/verify/DK6RUQJV5Y5Y" target="_blank">Materials Data Science</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                    <div class="flex-grow-1">
-                        <h4 class="mb-2">Nanotechnology & Spectroscopy</h4>
-                        <p>
-                            <a href="https://coursera.org/verify/9F2S42D2JZMU" target="_blank">Molecular Spectroscopy</a><br>
-                            <a href="https://coursera.org/verify/QC6UVQDW3XVY" target="_blank">Nano Maker's Course</a><br>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/XTH5ZZRNC2VE" target="_blank">Nanotechnology & Nanosensors</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                    <div class="flex-grow-1">
-                        <h4 class="mb-2">Other</h4>
-                        <p>
-                            <a href="https://cert.efset.org/en/8aQeTD" target="_blank">EF SET English</a><br>
-                            <a href="https://qr.page/g/3z9CFnPahiW" target="_blank">BLS Provider</a>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- PDF-based certificates below; convert to images and link or describe -->
             </div>
         </section>
     </div>
