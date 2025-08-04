@@ -1,9 +1,6 @@
 {
   "rewrites": [
-    { "source": "/education", "destination": "/dist/education.html" },
-    { "source": "/projects", "experience": "/dist/experience.html" },
-    { "source": "/cv", "certificates": "/dist/certificates.html" },
-    {"source": "/contact", "volunteering": "/dist/volunteering.html" }
-    { "source": "/contact", "index": "/dist/index.html" }
+    { "source": "/volunteering", "destination": "/volunteering.html" },
+    { "source": "/contact", "destination": "/contact.html" }
   ]
 }
