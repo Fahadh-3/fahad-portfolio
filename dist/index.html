@@ -63,38 +63,31 @@
             <i class="fas fa-file-download"></i> Download CV
         </a>
             <!-- Contact Form -->
-    <div class="mt-5">
-        <h3>Get in Touch</h3>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <!-- Honeypot (spam trap) -->
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-            </p>
 
-            <div class="mb-3">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="subject">Subject:</label>
-                <input type="text" class="form-control" id="subject" name="subject" required>
-            </div>
-            <div class="mb-3">
-                <label for="message">Message:</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-
-            <!-- Formspree fallback if you leave Netlify (uncomment below & replace XXXXXX endpoint) -->
-            <!-- <form action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST"></form> -->
-        </form>
-    </div>
+            <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                <div class="input-group">
+                <input type="hidden" name="access_key" value="588beb52-47a0-494a-b67a-16f9430087cd">
+                <div class="input-box">
+                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                    <span id="fullnameError" class="error"></span> <!-- Error message for Full Name -->
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <span id="emailError" class="error"></span> <!-- Error message for Email -->
+                </div>
+                <div class="input-box">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <span id="phoneError" class="error"></span> <!-- Error message for Phone Number -->
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <span id="subjectError" class="error"></span> <!-- Error message for Subject -->
+                </div>
+                </div>
+                <div class="input-group-2">
+                <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span id="messageError" class="error"></span> <!-- Error message for Message -->
+                <input type="submit" value="Send Message" class="btn">
+                </div>
+            </form>
 
     </div>
 </section>
